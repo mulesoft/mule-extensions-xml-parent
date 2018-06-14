@@ -20,16 +20,6 @@ Example of adding dynamic ports:
                     <dynamicPorts>
                         <dynamicPort>a.dynamic.here</dynamicPort>
                     </dynamicPorts>
-                    <environmentVariables>
-                        <MY_ENV>envVar</MY_ENV>
-                    </environmentVariables>
-                    <argLines>
-                        <!-- To debug the runtime through MUnit -->
-                        <debugger.argline>-agentlib:jdwp=transport=dt_socket,server=y,address=8000,suspend=y</debugger.argline>
-                        <argLine>-Djava.library.path=lib/</argLine>
-                        <argLine>-Xmx8192m</argLine>
-                        <argLine>-XX:-UseGCOverheadLimit</argLine>
-                    </argLines>
                 </configuration>
             </plugin>
         </plugins>
