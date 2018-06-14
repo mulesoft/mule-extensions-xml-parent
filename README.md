@@ -8,7 +8,7 @@ It provides several defaults that make managing and building connectors easier (
 ##Configuring MUnit for each project
 If needed, MUnit can be customized by adding a plugin with any of the needed parameters in each module, [see the complete configuration properties here](https://docs.mulesoft.com/munit/v/2.1/munit-maven-plugin-configuration).
 
-Example of adding dynamic ports:
+Example of adding dynamic port `${a.dynamic.port}`, useful when creating tests that rely on the `http:listener`, which port must be parameterized ([more info here](https://docs.mulesoft.com/munit/v/1.3/munit-maven-plugin-configuration#dynamic-ports)):
 ```xml
 <build>
     <pluginManagement>
@@ -18,7 +18,7 @@ Example of adding dynamic ports:
                 <artifactId>munit-extensions-maven-plugin</artifactId>
                 <configuration>
                     <dynamicPorts>
-                        <dynamicPort>a.dynamic.here</dynamicPort>
+                        <dynamicPort>a.dynamic.port</dynamicPort>
                     </dynamicPorts>
                 </configuration>
             </plugin>
@@ -27,7 +27,7 @@ Example of adding dynamic ports:
 </build>
 ```
 
-Example of adding dynamic ports, environment variables and also enabling the MUnit plugin to run in `debug` (port 8000) mode to troubleshoot issues in the runtime/plugin dependencies:
+Example of adding dynamic port (`${a.dynamic.port}`), environment variables (`${envVar}`) and also enabling the MUnit plugin to run in `debug` (port 8000) mode to troubleshoot issues in the runtime/plugin dependencies:
 ```xml
 <build>
     <pluginManagement>
