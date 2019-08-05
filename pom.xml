@@ -107,8 +107,8 @@
     </scm>
 
     <properties>
-        <mule.version>4.1.6-SNAPSHOT</mule.version>
-        <mule.extensions.maven.plugin.version>1.1.7-SNAPSHOT</mule.extensions.maven.plugin.version>
+        <mule.version>4.1.7-SNAPSHOT</mule.version>
+        <mule.extensions.maven.plugin.version>1.1.7</mule.extensions.maven.plugin.version>
 
         <munit.version>2.1.0</munit.version>
         <munit.extensions.maven.plugin.version>1.0.0-SNAPSHOT</munit.extensions.maven.plugin.version>
